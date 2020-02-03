@@ -1,3 +1,4 @@
+/node_modules*
 /iqs-services-*
 /iqs-clients-*
 /iqs-libs-*
