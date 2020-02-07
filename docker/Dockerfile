@@ -75,7 +75,7 @@ RUN ssh-keyscan github.com >> ~/.ssh/known_hosts; \
     ./checkout.ps1
 RUN nvm use 8.9.4 \
     && npm i;
-RUN ["pwsh", "pipuse .; piptask build -Components $Angularjs"]
+RUN ["pwsh", "pipuse .; piptask Build"]
 
 # Switch node
 # Build old applications

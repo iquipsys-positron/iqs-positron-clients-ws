@@ -13,9 +13,41 @@ task InstallDep {
 }
 
 # This works for Angularjs version of packages
-task Build {
-    # Proper sequence defined in $All variable it important!
+task BuildAngularJs {
+    # Proper sequence defined in $AngularJs variable it important!
     Invoke-Task -Task Build -Component $AngularJs
+}
+
+# This works for Angular version of packages
+task BuildAngular {
+    # Proper sequence defined in $Angular variable it important!
+    $Angular | ForEach-Object {
+		Write-Host "Building:" $_
+		cd $_
+		npm i
+		npm run build:prod
+		cd ..
+	}
+}
+
+task Collect {
+	if (Test-Path -Path ".\dist") {
+		Remove-Item -LiteralPath "dist" -Recurse -Force
+	}
+	New-Item -itemtype "directory" -Path . -Name "dist" -Force
+	$dist.keys | ForEach-Object {
+		Copy-Item $global:dist[$_] -Destination "dist\${_}" -Recurse
+	}
+	New-Item .\dist\index.html
+	Set-Content .\dist\index.html '<head>
+	<meta http-equiv="refresh" content="1;URL=/home/index.html" />
+	</head>'
+}
+
+task Build {
+	Invoke-Task -Task BuildAngularJs
+	Invoke-Task -Task BuildAngular
+	Invoke-Task -Task Collect
 }
 
 task Clean {
