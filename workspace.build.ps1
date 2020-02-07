@@ -12,9 +12,10 @@ task InstallDep {
     Install-NpmDependencies -Path .
 }
 
+# This works for Angularjs version of packages
 task Build {
     # Proper sequence defined in $All variable it important!
-    Invoke-Task -Task Build -Component $All
+    Invoke-Task -Task Build -Component $AngularJs
 }
 
 task Clean {
