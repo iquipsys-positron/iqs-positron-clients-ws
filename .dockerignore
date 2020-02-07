@@ -1,0 +1,8 @@
+/node_modules*
+/iqs-services-*
+/iqs-clients-*
+/iqs-libs-*
+/iqs-groups-*
+/iqs-bundles-*
+/iqs-facades-*
+/iqs-devenv
