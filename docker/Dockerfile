@@ -66,16 +66,16 @@ RUN git clone https://github.com/pip-tasks/pip-tasks-ws.git \
     && git clone https://github.com/pip-tasks/pip-tasks-all.git \
     && cd .. \
     && mv ./pip-tasks-ws /usr/local/share/powershell/Modules
-SHELL ["pwsh"]
-RUN Import-Module pip-tasks-common; Import-Module pip-tasks-js
+RUN ["pwsh", "Import-Module pip-tasks-common; Import-Module pip-tasks-js"]
 # Clone iqs-positron-clients-ws
 RUN ssh-keyscan github.com >> ~/.ssh/known_hosts; \
     git clone https://github.com/iquipsys-positron/iqs-positron-clients-ws.git /tmp/iqs-positron-clients-ws; \
     cd /tmp/iqs-positron-clients-ws; \
     git checkout dev; \
     ./checkout.ps1
-SHELL ["bash"]
 RUN nvm use 8.9.4 \
+    && npm i;
+RUN ["pwsh", "piptask build -Components $Angularjs"]
 
 # Switch node
 # Build old applications

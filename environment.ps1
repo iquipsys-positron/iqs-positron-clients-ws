@@ -1,6 +1,6 @@
 $global:Angularjs = @(
     'iqs-libs-clientshell-angular'
-    'iqs-clients-devicesconfig-angular'
+    'iqs-clients-deviceconfig-angular'
     'iqs-clients-emergencyconfig-angular'
     'iqs-clients-eventsconfig-angular'
     'iqs-clients-incidents-angular'
