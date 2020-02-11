@@ -41,14 +41,14 @@
   "homepage": "https://github.com/iquipsys-positron/iqs-positron-clients-ws#readme",
   "dependencies": {
     "node-sass": "^4.9.4",
-    "pip-admin-system": "git@github.com:pip-admin/pip-admin-system.git",
-    "pip-suite-all": "git@github.com:pip-suite/pip-suite-all.git"
+    "pip-admin-system": "https://github.com/pip-admin/pip-admin-system.git",
+    "pip-suite-all": "https://github.com/pip-suite/pip-suite-all.git"
   },
   "devDependencies": {
     "del": "^3.0.0",
     "globby": "^8.0.2",
     "gulp": "3.9.1",
-    "pip-webui-all": "git@github.com:pip-webui/pip-webui-all.git",
+    "pip-webui-all": "https://github.com/pip-webui/pip-webui-all.git",
     "pip-webui-tasks": "^1.8.0",
     "typescript": "^2.8.3"
   }
