@@ -44,12 +44,6 @@ task Collect {
 	</head>'
 }
 
-task Build {
-	Invoke-Task -Task BuildAngularJs
-	Invoke-Task -Task BuildAngular
-	Invoke-Task -Task Collect
-}
-
 task Clean {
     Invoke-Task -Task Clean -All
 }

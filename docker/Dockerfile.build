@@ -75,41 +75,7 @@ RUN ssh-keyscan github.com >> ~/.ssh/known_hosts; \
     ./checkout.ps1
 RUN nvm use 8.9.4 \
     && npm i;
-RUN ["pwsh", "pipuse .; piptask Build"]
-
-# Switch node
-# Build old applications
-# Switch node
-# Build new applications
-# Gather
-
-# Clone repository
-# RUN cd home/ && git clone https://github.com/iquipsys-positron/iqs-positron-clients-ws.git
-
-# # Copy local ssh keys
-# COPY docker/id_rsa /root/.ssh/
-
-# # Setup ssh access to git repositories
-# RUN chmod 600 /root/.ssh/id_rsa* \
-#     && ssh-keyscan github.com >> ~/.ssh/known_hosts \
-#     && ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
-
-# # Set working directory
-# WORKDIR /app
-
-# # Copy project file
-# COPY package.json .
-
-# # Install only production dependencies
-# #RUN npm install --only=production
-# RUN npm install
-
-# # Copy the entire project
-# COPY . .
-
-# # Set default environment variables
-# ##
-
-# EXPOSE 8080
-
-# CMD [ "pwsh" ]
+RUN ["pwsh", "pipuse .; piptask BuildAngularJs"]
+RUN nvm use 10.15.3
+RUN ["pwsh", "pipuse .; piptask BuildAngular"]
+RUN ["pwsh", "pipuse .; piptask Collect"]
