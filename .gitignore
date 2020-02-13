@@ -1,4 +1,4 @@
-/dist/*
+/dist*
 /node_modules*
 /iqs-services-*
 /iqs-clients-*
