@@ -74,9 +74,6 @@ function Ngx-Build {
     Remove-Item -LiteralPath "${Dir}.tar"
     docker exec ${NgxContainer} /bin/sh -c "tar -xf ${Dir}.tar"
     docker exec ${NgxContainer} /bin/sh -c "npm i && npm run build:prod"
-    if (Test-Path -Path ".\dist") {
-		Remove-Item -LiteralPath "dist" -Recurse -Force
-	}
     docker cp ${NgxContainer}:/usr/src/app/dist/${Dir} ../dist/${Dist}
     docker stop $NgxContainer
     docker rm $NgxContainer
