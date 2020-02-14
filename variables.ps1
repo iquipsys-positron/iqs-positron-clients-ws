@@ -14,9 +14,10 @@ $Dists = @(
     @{ dir = 'iqs-clients-usersettings-angular'; type = 'ng'; dist = 'settings' }
     @{ dir = 'iqs-clients-zoneconfig-angular'; type = 'ng'; dist = 'config_zones' }
     @{ dir = 'iqs-clients-home-angular'; type = 'ngx'; dist = 'home' }
+    @{ dir = 'iqs-clients-applications-angular'; type = 'ngx'; dist = 'applications' }
     @{ dir = 'iqs-clients-dataprofiles-angular'; type = 'ngx'; dist = 'dataprofiles' }
     @{ dir = 'iqs-clients-datamonitoring-angular'; type = 'ngx'; dist = 'datamonitoring' }
-    @{ dir = 'iqs-clients-applications-angular'; type = 'ngx'; dist = 'applications' }
+    @{ dir = 'iqs-clients-msgtemplates-angular'; type = 'ngx'; dist = 'msg_templates' }
 )
 $NgContainer = 'iqs-build-ng'
 $NgxContainer = 'iqs-build-ngx'
