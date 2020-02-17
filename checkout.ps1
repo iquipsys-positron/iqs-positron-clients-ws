@@ -29,6 +29,7 @@ git clone https://github.com/iquipsys-positron/iqs-clients-dataprofiles-angular.
 git clone https://github.com/iquipsys-positron/iqs-clients-guides-angular.git
 git clone https://github.com/iquipsys-positron/iqs-clients-logging-angular.git
 git clone https://github.com/iquipsys-positron/iqs-clients-msgtemplates-angular.git
+git clone https://github.com/iquipsys-positron/iqs-clients-users-angular.git
 
 # Misc
 git clone https://github.com/iquipsys-positron/iqs-devenv.git
