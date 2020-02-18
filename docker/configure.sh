@@ -15,5 +15,6 @@ if [[ $IQS_SERVER_URL ]]; then
     for i in "${json_configs[@]}"; do
         tmp=$(mktemp)
         jq ".session.serverUrl = \"${IQS_SERVER_URL}\"" $i > "$tmp" && mv "$tmp" $i
+        chmod 755 $i
     done
 fi

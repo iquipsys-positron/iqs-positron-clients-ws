@@ -1,2 +1,4 @@
+/dist*
+/docker*
 /node_modules*
 /iqs-*
