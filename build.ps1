@@ -80,7 +80,7 @@ function Ngx-Build {
     cd ..
 }
 
-if ($RebuildShell) {
+if (!(Test-Path -Path "${NgShell}/dist") -or $RebuildShell) {
     Ng-Build -Dir:$NgShell -IsShell
 }
 
