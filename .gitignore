@@ -1,3 +1,4 @@
+/.logs*
 /dist*
 /node_modules*
 /iqs-services-*
@@ -7,4 +8,5 @@
 /iqs-bundles-*
 /iqs-facades-*
 /iqs-devenv
+.iqsBuildErrors.json
 package-lock.json

@@ -1,3 +1,4 @@
+/.logs*
 /dist*
 /docker*
 /node_modules*
