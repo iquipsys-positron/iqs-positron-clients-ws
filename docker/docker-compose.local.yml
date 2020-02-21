@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   iqs-clients:
-    container_name: iuipsys-positron-clients
+    container_name: iquipsys-positron-clients
     build:
       context: ../
       dockerfile: ./docker/Nginx.Dockerfile
