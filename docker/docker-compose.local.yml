@@ -2,9 +2,11 @@ version: '3.3'
 
 services:
   iqs-clients:
+    container_name: iuipsys-positron-clients
     build:
       context: ../
       dockerfile: ./docker/Nginx.Dockerfile
+    image: iquipsys-positron-clients:1.0
     environment:
       - IQS_SERVER_URL=http://192.168.99.100:8080
     ports: 
