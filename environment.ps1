@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 $global:Angularjs = @(
     'iqs-libs-clientshell-angular'
     'iqs-clients-deviceconfig-angular'

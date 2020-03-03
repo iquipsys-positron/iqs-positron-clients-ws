@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 function Publish-AWS-S3($dir, $bucket)
 {
 	'aws s3 sync ./' + $dir + '/dist s3://www.positron.iquipsys.net/' + $bucket | cmd

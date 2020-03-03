@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 $VersionControl = 'git'
 $VersionControlRepos = @(
 	'git@github.com:iquipsys-positron/iqs-devenv'

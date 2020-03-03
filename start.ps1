@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 # Variables
 . .\variables.ps1
 
