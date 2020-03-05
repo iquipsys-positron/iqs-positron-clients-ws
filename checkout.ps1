@@ -1,4 +1,4 @@
-#!/usr/local/bin/pwsh
+#!/usr/bin/env pwsh
 
 # Libraries
 git clone https://github.com/iquipsys-positron/iqs-libs-clientshell-angular.git

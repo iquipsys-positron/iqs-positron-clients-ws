@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 param(
     [switch] $CleanDist = $true,
     [switch] $RebuildShell = $false,

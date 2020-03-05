@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 $Dists = @(
     @{ dir = 'iqs-clients-deviceconfig-angular'; type = 'ng'; dist = 'config_devices' }
     @{ dir = 'iqs-clients-emergencyconfig-angular'; type = 'ng'; dist = 'config_emergency' }
