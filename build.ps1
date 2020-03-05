@@ -25,13 +25,13 @@ if (($NgImageExists -and $RebuildBuildImages) -or (-not $NgImageExists)) {
     if ($NgImageExists) {
         docker rmi ${NgImage} --force
     }
-    docker build -f ./docker/NgBuild.Dockerfile -t ${NgImage} .
+    docker build --no-cache -f ./docker/NgBuild.Dockerfile -t ${NgImage} .
 }
 if (($NgxImageExists -and $RebuildBuildImages) -or (-not $NgxImageExists)) {
     if ($NgxImageExists) {
         docker rmi ${NgxImage} --force
     }
-    docker build -f ./docker/NgxBuild.Dockerfile -t ${NgxImage} .
+    docker build --no-cache -f ./docker/NgxBuild.Dockerfile -t ${NgxImage} .
 }
 
 function Ng-Build {
